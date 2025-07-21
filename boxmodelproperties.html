@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sachin Tendulkar Float Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #fceabb, #f8b500);
+      margin: 0;
+      padding: 30px;
+    }
+
+    .container {
+      background-color: #fff3cd;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      overflow: hidden;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .image {
+      float: left;
+      width: 40%;
+      margin-right: 20px;
+    }
+
+    .image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .text {
+      float: right;
+      width: 55%;
+    }
+
+    h1 {
+      color: #d9480f;
+      margin-top: 0;
+    }
+
+    p {
+      color: #333;
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    @media (max-width: 768px) {
+      .image, .text {
+        float: none;
+        width: 100%;
+      }
+
+      .image {
+        margin: 0 0 20px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="image">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Sachin_Tendulkar_at_MRF_Promotion_Event.jpg/330px-Sachin_Tendulkar_at_MRF_Promotion_Event.jpg" alt="Sachin Tendulkar">
+    </div>
+    <div class="text">
+      <h1>Sachin Tendulkar</h1>
+      <p>
+        Sachin Tendulkar is one of the greatest cricketers in the history of the sport. Born on April 24, 1973, in Mumbai, India,
+        he began playing cricket at a very young age and quickly rose through the ranks with his extraordinary talent. Known as
+        the “Master Blaster” and the “Little Master,” Sachin made his debut for the Indian national team at the age of just 16,
+        against Pakistan in 1989. Over the next two decades, he became a cricketing legend admired across the globe.
+      </p>
+      <p>
+        Tendulkar holds numerous records, including being the first cricketer to score 100 international centuries and the first
+        to reach 200 runs in a One Day International (ODI). He is also the highest run-scorer in both Tests and ODIs. His calm
+        attitude, incredible technique, and unmatched dedication made him a role model for millions. In 2011, he fulfilled a
+        lifelong dream by helping India win the ICC Cricket World Cup. He retired from international cricket in 2013 after a
+        glorious career spanning 24 years. For his contributions, he was awarded the Bharat Ratna, India's highest civilian honor.
+        Sachin Tendulkar remains a symbol of passion, humility, and excellence in sports.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
