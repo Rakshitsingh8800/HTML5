@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Colorful Timer</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #00c3ff, #ffff1c);
+      animation: gradientMove 5s infinite alternate;
+    }
+
+    @keyframes gradientMove {
+      0% { background: linear-gradient(135deg, #00c3ff, #ffff1c); }
+      100% { background: linear-gradient(135deg, #ff5edf, #04c8de); }
+    }
+
+    .timer-box {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      text-align: center;
+      color: white;
+    }
+
+    .time {
+      font-size: 60px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .controls button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background-color: white;
+      color: black;
+      transition: background 0.3s;
+    }
+
+    .controls button:hover {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="timer-box">
+    <div class="time" id="timer">00:00</div>
+    <div class="controls">
+      <button onclick="startTimer()">Start</button>
+      <button onclick="stopTimer()">Stop</button>
+      <button onclick="resetTimer()">Reset</button>
+    </div>
+  </div>
+
+  <script>
+    let seconds = 0;
+    let interval = null;
+
+    function updateDisplay() {
+      let min = Math.floor(seconds / 60);
+      let sec = seconds % 60;
+      document.getElementById("timer").innerText =
+        (min < 10 ? "0" + min : min) + ":" + (sec < 10 ? "0" + sec : sec);
+    }
+
+    function startTimer() {
+      if (interval) return; // Already running
+      interval = setInterval(() => {
+        seconds++;
+        updateDisplay();
+      }, 1000);
+    }
+
+    function stopTimer() {
+      clearInterval(interval);
+      interval = null;
+    }
+
+    function resetTimer() {
+      stopTimer();
+      seconds = 0;
+      updateDisplay();
+    }
+
+    updateDisplay(); // Initial call
+  </script>
+
+</body>
+</html>
