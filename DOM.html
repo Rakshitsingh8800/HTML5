@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Accessing values with HTML DOM Structure</title>
+        <style>
+            body {
+                background-color: aliceblue;
+                font-family: Arial, Helvetica, sans-serif;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                margin: 0;
+            }
+
+            footer {
+                background-color: black;
+                color: white;
+                text-align: center;
+                padding: 10px 0;
+                margin-top: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="one">Welcome To My Web Page</h1>
+        <p>This is the welcome message from my webpage.</p>
+        <h2>About me!</h2>
+        <p>Hi, I am Rakshit. I am a student at Divine Happy School and I love learning about technology and programming. I am currently learning coding from Codingal, where I am improving my skills in creating apps, games, and websites.
+        I enjoy solving problems, making projects, and exploring new things in the world of computers.
+        My goal is to become a great programmer and build amazing software in the project.</p>
+
+        <script>
+            var text = document.getElementById("one").innerHTML;
+            alert("The first webpage. " + text);
+        </script>
+
+        <footer>
+            <p>Made by me with ❤️ Rakshit</p>
+        </footer>
+    </body>
+</html>
