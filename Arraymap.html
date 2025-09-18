@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Array Playground</title>
+    <link rel="shortcut icon" href="simple-math-education-logo-designs-concept-vector_7649-1747.jpg" type="image/jpg">
+  </head>
+  <body>
+    <h2>Array Playground 🚀</h2>
+    <p>Enter numbers separated by commas:</p>
+    <input type="text" id="userArray" value="40,100,1,5,25,10">
+    <br><br>
+
+    <button onclick="ascending()">Ascending</button>
+    <button onclick="descending()">Descending</button>
+    <button onclick="multiplyBy10()">Multiply ×10</button>
+    <button onclick="evaluateExpressions()">Evaluate</button>
+
+    <p id="result"></p>
+
+    <script>
+      function getArray() {
+        let input = document.getElementById("userArray").value;
+        return input.split(",").map(Number); 
+      }
+
+      function displayResult(arr) {
+        document.getElementById("result").innerHTML = "Result: " + arr.join(", ");
+      }
+
+      function ascending() {
+        let points = getArray();
+        points.sort((a, b) => a - b);
+        displayResult(points);
+      }
+
+      function descending() {
+        let points = getArray();
+        points.sort((a, b) => b - a);
+        displayResult(points);
+      }
+
+      function multiplyBy10() {
+        let numbers = getArray();
+        let newarray = numbers.map(num => num * 10);
+        displayResult(newarray);
+      }
+
+      function evaluateExpressions() {
+        let x = 10, y = 20;
+        let a = eval("x + y");
+        let b = eval("2 * 2");
+        let c = eval("y - x");
+        document.getElementById("result").innerHTML = 
+          "x + y = " + a + "<br>2 * 2 = " + b + "<br>y - x = " + c;
+      }
+    </script>
+  </body>
+</html>
