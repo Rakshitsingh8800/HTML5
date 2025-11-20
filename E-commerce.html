@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My E-Commerce Store</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+    background: #111;
+    color: #fff;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #ffc107;
+}
+
+/* HERO SECTION */
+.hero {
+    background: url("https://images.unsplash.com/photo-1542831371-d531d36971e6") center/cover no-repeat;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 40px;
+}
+
+.shop-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    background: #ffc107;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.shop-btn:hover {
+    background: #e0a800;
+}
+
+/* PRODUCTS */
+.products {
+    padding: 50px;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-card button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background: #111;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.product-card button:hover {
+    background: #333;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1 class="logo">MyStore</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h2>Welcome to MyStore</h2>
+        <p>Your one-stop shop for amazing products!</p>
+        <button class="shop-btn">Shop Now</button>
+    </section>
+
+    <!-- PRODUCT GRID -->
+    <section class="products">
+        <h2>Featured Products</h2>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+                <img src="0c226dce10e6f23d21cfa716f9f0aa94.jpg" alt="Product1">
+                <h3>Nike Hoodies & Shoes</h3>
+                <p>$20.00</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="download (3).jpg" alt="Product2">
+                <h3>Samsung Essential Series S3 55.88 cm (22 inch) Full HD LED Backlit IPS Panel with D-Sub, HDMI Flat Monitor (LS22D300GAWXXL)  (Response Time: 5 ms, 100 Hz Refresh Rate)</h3>
+                <p>$35.00</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="download (4).jpg" alt="Product3">
+                <h3>Men Striped Zip Neck Cotton Blend Black T-Shirt</h3>
+                <p>$28.00</p>
+                <button>Add to Cart</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 MyStore | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
