@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Navbar-Rakshit</title>
+        <style>
+            body{
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .topnav{
+                overflow: hidden;
+                background-color: #333;
+            }
+
+            .topnav a{
+                float: left;
+                color: #1affa3;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            .topnav a:hover{
+                background-color: #ddd;
+                color: black;
+            }
+
+            .topnav a.active{
+                background-color: #ffe066;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+
+       
+        <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href="#">About_Us</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact_Us</a>
+        </div>
+         <section>
+            <img class="mySlides" src="playlist-cover.png" style="height: 500px;">
+
+            <img class="mySlides" src="semantic-tags.png" style="height: 500px;">
+        </section>
+        <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}
+                    x[myIndex-1].style.display = "block";
+                    setTimeout(carousel, 3000)
+                
+            }
+        </script>
+    </body>
+</html>
