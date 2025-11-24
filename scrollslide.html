@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Scroll-Slider Website</title>
+        <style>
+            .pimg1, .pimg2, .pimg3{
+                position: relative;
+                opacity: 0.79;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+
+            .pimg1{
+                background-image:url(download\ \(1\).jpg) ;
+                min-height: 100%;
+            }
+            .pimg2{
+                background-image:url(photo-1614200179396-2bdb77ebf81b.jpg) ;
+                min-height: 400px;
+            }
+            .pimg3{
+                background-image:url(playlist-cover.png) ;
+                min-height: 400px;
+            }
+
+            .section{
+                text-align: center;
+                padding: 50px 80px;
+            }
+            
+            .section-light{
+                background-color: #f4f4f4;
+                color: #666;
+            }
+
+            .section-dark{
+                background-color: #282e34;
+                color: #ddd;
+            }
+
+            .ptext{
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                text-align: center;
+                color: #000;
+                font-size: 27px;
+                letter-spacing: 8px;
+                text-transform: uppercase;
+            }
+
+            .ptext .border{
+                background-color: #111;
+                color: #fff;
+                padding: 20px;
+            }
+
+            .ptext .border.trans{
+                background-color: transparent;
+            }
+
+            @media(max-width:568px){
+                .pimg1, .pimg2, .pimg3{
+                    background-attachment: scroll;
+                }
+                      img{
+                align-items: center;
+            }
+            }
+            
+            .slider-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              
+            }
+
+            .footer{
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: black;
+                color: white;
+                text-align: center;
+            }
+        </style>
+    </head> 
+    <body>
+
+        <div class="footer">
+            <p>@Copy all rights and reserved by Rakshit Singh</p>
+        </div>
+        <span class="border trans" style="font-size: 40px;">
+            <center>Welcome all to this website</center>
+        </span>
+        <br>
+        <div class="slider-container">
+        <section>
+            <img class="mySlides" src="download (1).jpg" style="height: 500px;">
+            <img class="mySlides" src="photo-1614200179396-2bdb77ebf81b.jpg" style="height: 500px;">
+            <img class="mySlides" src="playlist-cover.png" style="height: 500px;">
+        </section>
+        </div>
+        <section class="section section-dark">
+            <h2>Food</h2>
+            <p>Food is any substance consumed to provide nutritional support for an organism. Food is usually of plant, animal or fungal origin, and contains essential such as carbohydrates, fats, proteins, viamins, or minerals.
+
+            </p>
+        </section>
+
+        <div class="pimg3">
+            <div class="ptext">
+                <span class="border trans">
+                    Image Two Text
+                </span>
+            </div>
+        </div>
+
+        <p>Pizza</p>
+        <p><img src="istockphoto-521403691-612x612.jpg" style="width: 170px;height: 170px;margin-left: 15px;float: right;">
+        
+            Pizza (Italian: ['pittsa'], Neapolitan:['pittsa']) is a savory dish of Italian origin consisting of a usually rounf, flattened base of leavened wheat-based dough topped with tomatoes, cheese,and often more ingrediants (such as anchovies, mushrooms, onions, olives, pineapple, meat, etc.), which is then baked at a high temperature, traditionally in a wood-fired oven.[1] A small pizza is sometimes called a pizzetta. A person who makes pizza is known as a pizzaiolo.
+    </p>
+    <hr>
+     <p>Pizza</p>
+        <p><img src="istockphoto-521403691-612x612.jpg" style="width: 170px;height: 170px;margin-left: 15px;float: left;">
+        
+            Pizza (Italian: ['pittsa'], Neapolitan:['pittsa']) is a savory dish of Italian origin consisting of a usually rounf, flattened base of leavened wheat-based dough topped with tomatoes, cheese,and often more ingrediants (such as anchovies, mushrooms, onions, olives, pineapple, meat, etc.), which is then baked at a high temperature, traditionally in a wood-fired oven.[1] A small pizza is sometimes called a pizzetta. A person who makes pizza is known as a pizzaiolo.
+    </p>
+        <script>
+        var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                     myIndex++;
+            if (myIndex > x.length) {myIndex = 1}
+            x[myIndex-1].style.display = "block";
+            setTimeout(carousel, 3000);
+            }
+
+       
+        </script>
+       
+    </body>
+</html>
